@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cmd.exe /c \"start c:\\\\Users\\\\novik\\\\Desktop\\\\hypnopractica\\\\index.html\")",
+      "Read(//c/c/Users/novik/Desktop/**)",
+      "Bash(read f *)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\novik\\Desktop\\HypnoPractica-PDFs",
+      "c:\\c\\Users\\novik\\Desktop\\HypnoPractica-PDFs"
+    ]
+  }
+}

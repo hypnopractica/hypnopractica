@@ -1,0 +1,38 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / editor
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+
+# Internal docs (не выкладываем публично)
+HANDOFF.md
+BRIEF.md
+HypnoPractica_Website_Structure_*.md
+HypnoPractica_Структура_сайта_*.docx
+HypnoPractica_Документы.docx
+*.docx
+*.pdf.backup
+
+# Utility scripts (не нужны на сайте)
+extract-docx.js
+
+# Bot banner templates (не относятся к сайту)
+covers/
+
+# Backup / duplicate folders (если появятся)
+*-backup/
+*-copy/
+* — копия/
+* — копия (*)/
+
+# Node (на случай если появится package.json)
+node_modules/
+
+# Local-only files
+*.log
+*.tmp

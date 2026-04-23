@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(node \"/c/Users/novik/Desktop/hypnopractica/fix-color-scheme.js\")",
+      "Bash(node \"/c/Users/novik/Desktop/hypnopractica/remove-title.js\")",
+      "Bash(node extract-docx.js \"/c/Users/novik/Desktop/HypnoPractica-PDFs/source/HP_Эмоции_и_Чувства_ГАЙД.docx\" \"/c/Users/novik/Desktop/HypnoPractica-PDFs/_emotions.txt\")",
+      "Bash(node extract-docx.js \"/c/Users/novik/Desktop/HypnoPractica-PDFs/source/HP_Запуск_Практики_Гипнотерапевта.docx\" \"/c/Users/novik/Desktop/HypnoPractica-PDFs/_practice_launch.txt\")",
+      "Bash(curl -sL -o _plutchik.svg \"https://upload.wikimedia.org/wikipedia/commons/c/ce/Plutchik-wheel.svg\")",
+      "Bash(node \"/c/Users/novik/Desktop/hypnopractica/fix-page-overflow.js\")",
+      "Bash(node \"/c/Users/novik/Desktop/hypnopractica/fix-blank-pages.js\")",
+      "Bash(node \"/c/Users/novik/Desktop/hypnopractica/fix-print-bg.js\")",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Read(//c/Program Files \\(x86\\)/Google/Chrome/Application/**)",
+      "Bash(node generate-pdfs.js)",
+      "Read(//c/Users/novik/Desktop/**)",
+      "Bash(node \"/c/Users/novik/Desktop/hypnopractica/fix-natural-flow.js\")",
+      "Bash(node \"/c/Users/novik/Desktop/hypnopractica/fix-cover-bg.js\")",
+      "Bash(node \"/c/Users/novik/Desktop/hypnopractica/fix-final-polish.js\")",
+      "Bash(node \"/c/Users/novik/Desktop/hypnopractica/remove-url.js\")",
+      "Bash(node extract-docx.js \"/c/Users/novik/Desktop/HypnoPractica-PDFs/source/HP_Практическая_Психосоматика.docx\" \"/c/Users/novik/Desktop/HypnoPractica-PDFs/_psy.txt\")",
+      "Bash(grep -iE \"\\\\.png$\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --hide-scrollbars --virtual-time-budget=10000 --run-all-compositor-stages-before-draw --window-size=1080,1080 --screenshot=\"C:\\\\\\\\Users\\\\\\\\novik\\\\\\\\Desktop\\\\\\\\HP_gifts_banner_v2.png\" \"file:///C:/Users/novik/Desktop/hypnopractica/covers/gifts-render.html\")",
+      "Read(//c/Users/novik/Downloads/Telegram Desktop//**)",
+      "Bash(ffmpeg -version)",
+      "Bash(winget install *)",
+      "Bash(mkdir -p /tmp/ffmpeg)",
+      "Read(//tmp/**)",
+      "Bash(curl -sL -o ffmpeg.zip \"https://github.com/GyanD/codexffmpeg/releases/download/7.1/ffmpeg-7.1-essentials_build.zip\")",
+      "Bash(unzip -q ffmpeg.zip)",
+      "Bash(/tmp/ffmpeg/ffmpeg-7.1-essentials_build/bin/ffmpeg.exe -version)",
+      "Bash(/tmp/ffmpeg/ffmpeg-7.1-essentials_build/bin/ffmpeg.exe -y -i '/c/Users/novik/Downloads/Telegram Desktop/Отзыв Татьяна.MOV' -c:v libx264 -preset medium -crf 27 -c:a aac -b:a 96k -movflags +faststart '/c/Users/novik/Desktop/Отзыв Татьяна.mp4')",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --hide-scrollbars --virtual-time-budget=10000 --run-all-compositor-stages-before-draw --window-size=1920,1080 --screenshot=\"C:\\\\\\\\Users\\\\\\\\novik\\\\\\\\Desktop\\\\\\\\HP_gifts_banner_wide.png\" \"file:///C:/Users/novik/Desktop/hypnopractica/covers/gifts-wide.html\")",
+      "Read(//c/Users/novik/Downloads//**)"
+    ]
+  }
+}
