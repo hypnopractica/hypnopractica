@@ -9,7 +9,7 @@
   .header .btn--primary.btn--small { display: none; }
   .header__burger { display: flex; }
 
-  .section--hero { min-height: 100svh; padding: 100px 0 64px; }
+  .section--hero { min-height: 100svh; padding: 100px 0 56px; }
 
   .hero__decor-circle,
   .hero__decor-circle--sm,
@@ -21,10 +21,17 @@
 
   .hero__content { max-width: 100%; }
 
-  .hero__title { font-size: clamp(32px, 7vw, 42px); }
+  .hero__title {
+    font-size: clamp(28px, 7.5vw, 34px);
+    line-height: 1.2;
+    overflow-wrap: break-word;
+    -webkit-hyphens: none;
+    hyphens: none;
+  }
 
   .hero__subtitle {
-    font-size: 17px;
+    font-size: 16px;
+    line-height: 1.6;
     max-width: 100%;
   }
 
@@ -161,6 +168,14 @@
 
   .author__name { text-align: center; }
   .author__credentials { text-align: left; }
+
+  /* Paragraph spacing for long-read sections */
+  #evidence p + p,
+  #legal-info p + p { margin-top: 14px; }
+
+  /* Pricing — split payment note should read like a stack of paragraphs, not a single block */
+  .pricing__payment-note { text-align: left; }
+  .pricing__payment-note p { line-height: 1.6; }
 }
 
 /* ===== TABLET (768 - 1023px) ===== */

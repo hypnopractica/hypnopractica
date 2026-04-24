@@ -145,6 +145,42 @@ if (parallaxElements.length > 0 && !window.matchMedia('(prefers-reduced-motion: 
   }, { passive: true });
 }
 
+/* ===== MOBILE PARALLAX for bridge/chess/final-cta backgrounds ===== */
+(() => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const bgs = document.querySelectorAll('[data-parallax-mobile]');
+  if (!bgs.length) return;
+
+  const mq = window.matchMedia('(max-width: 1023px)');
+  let ticking = false;
+
+  const update = () => {
+    const vh = window.innerHeight;
+    const active = mq.matches;
+    bgs.forEach(bg => {
+      if (!active) { bg.style.transform = ''; return; }
+      const section = bg.parentElement;
+      const rect = section.getBoundingClientRect();
+      const speed = parseFloat(bg.dataset.parallaxMobile) || 0.18;
+      const sectionCenter = rect.top + rect.height / 2;
+      const offset = (vh / 2 - sectionCenter) * speed;
+      bg.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
+    });
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  if (mq.addEventListener) mq.addEventListener('change', update);
+  update();
+})();
+
 /* ===== PAIN SWITCHER (MOBILE) ===== */
 document.querySelectorAll('.pain__switcher-btn').forEach(btn => {
   btn.addEventListener('click', () => {

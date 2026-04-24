@@ -342,12 +342,26 @@
 .section--bridge {
   background: url('../img/bridge-bg.png') center/cover no-repeat fixed, var(--color-bg);
   position: relative;
+  overflow: hidden;
 }
 
+/* Mobile: iOS ignores fixed — use nested .section__bg with JS parallax */
 @media (max-width: 1023px) {
   .section--bridge {
-    background-attachment: scroll;
+    background: var(--color-bg);
   }
+  .section--bridge .section__bg {
+    display: block;
+    position: absolute;
+    inset: -25% 0 -25% 0;
+    background: url('../img/bridge-bg.png') center/cover no-repeat;
+    z-index: 0;
+    will-change: transform;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section--bridge .section__bg { display: none; }
 }
 
 .section--bridge::before {
@@ -356,12 +370,12 @@
   inset: 0;
   background: linear-gradient(180deg, rgba(20,18,16,0.25) 0%, rgba(20,18,16,0.45) 60%, rgba(20,18,16,0.65) 100%);
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
 }
 
 .section--bridge .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .bridge__cards {
@@ -920,6 +934,26 @@
 .section--chess-bg {
   background: url('../img/chess-bg.jpg') center/cover no-repeat fixed;
   position: relative;
+  overflow: hidden;
+}
+
+/* Mobile: iOS ignores fixed — use nested .section__bg with JS parallax */
+@media (max-width: 1023px) {
+  .section--chess-bg {
+    background: var(--color-bg);
+  }
+  .section--chess-bg .section__bg {
+    display: block;
+    position: absolute;
+    inset: -25% 0 -25% 0;
+    background: url('../img/chess-bg.jpg') center/cover no-repeat;
+    z-index: 0;
+    will-change: transform;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section--chess-bg .section__bg { display: none; }
 }
 
 .section--chess-bg::before {
@@ -927,12 +961,12 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(10,10,12,0.82) 0%, rgba(10,10,12,0.7) 50%, rgba(10,10,12,0.85) 100%);
-  z-index: 0;
+  z-index: 1;
 }
 
 .section--chess-bg .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .format__timeline {
@@ -1187,18 +1221,36 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: var(--color-bg-card);
-  background-size: cover;
-  background-position: center 15%;
+  background: url('../img/cta-photo.png') center 25%/cover no-repeat, var(--color-bg-card);
   position: relative;
+  overflow: hidden;
+}
+
+/* Mobile: iOS ignores fixed — use nested .section__bg with JS parallax */
+@media (max-width: 1023px) {
+  .section--final-cta {
+    background: var(--color-bg-card);
+  }
+  .section--final-cta .section__bg--cta {
+    display: block;
+    position: absolute;
+    inset: -25% 0 -25% 0;
+    background: url('../img/cta-photo.png') center 25%/cover no-repeat;
+    z-index: 0;
+    will-change: transform;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section--final-cta .section__bg--cta { display: none; }
 }
 
 .section--final-cta::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10,10,12,0.88) 0%, rgba(10,10,12,0.78) 40%, rgba(10,10,12,0.92) 100%);
-  z-index: 0;
+  background: linear-gradient(180deg, rgba(15,13,11,0.85) 0%, rgba(15,13,11,0.72) 40%, rgba(15,13,11,0.92) 100%);
+  z-index: 1;
 }
 
 .section--final-cta .container { position: relative; z-index: var(--z-content); }
