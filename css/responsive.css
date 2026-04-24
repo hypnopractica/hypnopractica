@@ -22,7 +22,7 @@
   .hero__content { max-width: 100%; }
 
   .hero__title {
-    font-size: clamp(28px, 7.5vw, 34px);
+    font-size: clamp(26px, 7vw, 30px);
     line-height: 1.2;
     overflow-wrap: break-word;
     -webkit-hyphens: none;
