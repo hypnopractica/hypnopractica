@@ -48,8 +48,8 @@ h3, .h3 {
 /* ===== TEXT ACCENTS ===== */
 .gold { color: var(--color-gold); }
 .gold-italic { color: var(--color-gold); font-style: italic; }
-.accent { color: #D4C4A0; font-weight: var(--weight-semibold); }
-.accent-italic { color: #D4C4A0; font-style: italic; }
+.accent { color: var(--color-gold-hover); font-weight: var(--weight-semibold); }
+.accent-italic { color: var(--color-gold-hover); font-style: italic; }
 
 /* ===== SECTIONS ===== */
 .section {
