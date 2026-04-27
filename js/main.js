@@ -24,7 +24,7 @@ const fadeObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.section, .mini-cta').forEach(el => {
+document.querySelectorAll('.section, .mini-cta, .section-bridge').forEach(el => {
   fadeObserver.observe(el);
 });
 
