@@ -1281,6 +1281,188 @@
 }
 
 /* ========================================
+   SECTION BRIDGE — крючки между блоками
+   ======================================== */
+.section-bridge {
+  padding: 28px 0;
+  text-align: center;
+}
+
+.section-bridge__text {
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: var(--font-heading);
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.45;
+  color: var(--color-gold);
+  font-style: italic;
+  letter-spacing: 0.01em;
+  position: relative;
+  padding: 0 24px;
+}
+
+.section-bridge__text::before,
+.section-bridge__text::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-border), transparent);
+  margin: 14px auto;
+}
+
+@media (max-width: 600px) {
+  .section-bridge {
+    padding: 20px 0;
+  }
+  .section-bridge__text {
+    font-size: 17px;
+    padding: 0 16px;
+  }
+  .section-bridge__text::before,
+  .section-bridge__text::after {
+    width: 40px;
+    margin: 10px auto;
+  }
+}
+
+/* ========================================
+   NOT-FOR-YOU PANEL
+   ======================================== */
+.not-for-you__panel {
+  position: relative;
+  max-width: var(--max-width-text);
+  margin: 0 auto;
+  padding: clamp(28px, 3.5vw, 40px) clamp(22px, 3vw, 36px);
+  background: rgba(15, 13, 11, 0.55);
+  border: 1px solid var(--color-gold-border);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.not-for-you__panel::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 17px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(196, 162, 101, 0.5), rgba(196, 162, 101, 0.1) 40%, rgba(196, 162, 101, 0.5));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.not-for-you__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.not-for-you__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 16px;
+  background: rgba(196, 162, 101, 0.04);
+  border-radius: 10px;
+  transition: background 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+}
+
+.not-for-you__item:hover {
+  background: rgba(196, 162, 101, 0.08);
+  transform: translateX(2px);
+}
+
+.not-for-you__icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  opacity: 0.85;
+}
+
+.not-for-you__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.not-for-you__text {
+  color: var(--color-text-body);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.not-for-you__divider {
+  height: 1px;
+  margin: 28px 0 24px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-border), transparent);
+}
+
+.not-for-you__yes {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  background: linear-gradient(135deg, rgba(196, 162, 101, 0.14), rgba(196, 162, 101, 0.06));
+  border: 1px solid rgba(196, 162, 101, 0.35);
+  border-radius: 12px;
+}
+
+.not-for-you__yes-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  background: rgba(196, 162, 101, 0.18);
+  border-radius: 50%;
+}
+
+.not-for-you__yes-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.not-for-you__yes-text {
+  margin: 0;
+  color: var(--color-text);
+  font-weight: var(--weight-semibold);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .not-for-you__item {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+  .not-for-you__icon {
+    width: 24px;
+    height: 24px;
+  }
+  .not-for-you__text {
+    font-size: 15px;
+  }
+  .not-for-you__yes {
+    padding: 16px 18px;
+    gap: 12px;
+  }
+  .not-for-you__yes-text {
+    font-size: 15px;
+  }
+}
+
+/* ========================================
    FOOTER
    ======================================== */
 .footer {
