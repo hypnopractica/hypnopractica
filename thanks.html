@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Готово — HypnoPractica</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <style>
+    .thanks {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+    .thanks__inner {
+      max-width: 640px;
+      width: 100%;
+      text-align: center;
+    }
+    .thanks__logo {
+      width: 140px;
+      height: auto;
+      margin: 0 auto 36px;
+      display: block;
+    }
+    .thanks__check {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--color-gold-light);
+      border: 1px solid var(--color-gold-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 28px;
+    }
+    .thanks__check svg {
+      width: 32px;
+      height: 32px;
+      stroke: var(--color-gold);
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .thanks__title {
+      font-family: var(--font-heading);
+      font-size: clamp(32px, 5vw, 44px);
+      color: var(--color-text);
+      margin-bottom: 16px;
+      letter-spacing: var(--tracking-tight);
+      line-height: 1.15;
+    }
+    .thanks__subtitle {
+      font-size: 17px;
+      color: var(--color-text-body);
+      margin-bottom: 48px;
+      line-height: 1.6;
+    }
+    .thanks__steps {
+      text-align: left;
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-gold-border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 36px;
+    }
+    .thanks__steps-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      color: var(--color-gold);
+      margin-bottom: 24px;
+      letter-spacing: 0.02em;
+      text-align: center;
+    }
+    .thanks__step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+    .thanks__step:last-child {
+      margin-bottom: 0;
+    }
+    .thanks__step-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      color: var(--color-bg);
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .thanks__step-text {
+      font-size: 15px;
+      color: var(--color-text-body);
+      line-height: 1.6;
+    }
+    .thanks__step-text strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+    .thanks__step-text a {
+      color: var(--color-gold);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .thanks__step-text a:hover {
+      color: var(--color-gold-hover);
+    }
+    .thanks__cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px 36px;
+      background: var(--gradient-cta);
+      color: var(--color-bg);
+      border: none;
+      border-radius: 30px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      box-shadow: 0 4px 24px rgba(196, 162, 101, 0.18);
+    }
+    .thanks__cta:hover {
+      background: var(--gradient-cta-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 32px rgba(196, 162, 101, 0.28);
+    }
+    .thanks__cta svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+    .thanks__signature {
+      margin-top: 48px;
+      font-style: italic;
+      color: var(--color-text-secondary);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .thanks__signature strong {
+      color: var(--color-text);
+      font-style: normal;
+      font-weight: 500;
+    }
+    .thanks__footer {
+      margin-top: 56px;
+      padding-top: 28px;
+      border-top: 1px solid var(--color-gold-border);
+      font-size: 13px;
+      color: var(--color-text-muted);
+    }
+    .thanks__footer a {
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    .thanks__footer a:hover {
+      color: var(--color-gold);
+    }
+
+    @media (max-width: 600px) {
+      .thanks__steps { padding: 24px 20px; }
+      .thanks__cta { padding: 16px 24px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="thanks">
+    <div class="thanks__inner">
+
+      <div class="thanks__check" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 7"/></svg>
+      </div>
+
+      <h1 class="thanks__title">Готово. Ты внутри.</h1>
+
+      <p class="thanks__subtitle">
+        Оплата прошла, твоё место в&nbsp;программе HypnoPractica закреплено.<br>
+        Дальше&nbsp;&mdash; три коротких шага.
+      </p>
+
+      <div class="thanks__steps">
+        <p class="thanks__steps-title">Что делать сейчас</p>
+
+        <div class="thanks__step">
+          <div class="thanks__step-num">1</div>
+          <div class="thanks__step-text">
+            <strong>Проверь почту.</strong> Через пару минут придёт письмо с&nbsp;логином, паролем и&nbsp;ссылкой на&nbsp;твой личный кабинет. Если письма нет&nbsp;&mdash; глянь папку &laquo;Спам&raquo;.
+          </div>
+        </div>
+
+        <div class="thanks__step">
+          <div class="thanks__step-num">2</div>
+          <div class="thanks__step-text">
+            <strong>Подпишись на&nbsp;закрытый Telegram-канал.</strong> Там расписание эфиров, ссылки на&nbsp;Zoom и&nbsp;все важные объявления. Ссылка ниже&nbsp;&mdash; жми и&nbsp;вступай.
+          </div>
+        </div>
+
+        <div class="thanks__step">
+          <div class="thanks__step-num">3</div>
+          <div class="thanks__step-text">
+            <strong>Открой первый модуль</strong> в&nbsp;кабинете и&nbsp;посмотри что внутри. Знакомься со&nbsp;структурой, не&nbsp;торопись. Первый эфир&nbsp;&mdash; в&nbsp;ближайшие дни, расписание&nbsp;&mdash; в&nbsp;канале.
+          </div>
+        </div>
+      </div>
+
+      <a href="https://t.me/+HatLr2QG-JJhYzE6" class="thanks__cta">
+        <svg viewBox="0 0 24 24"><path d="M22 2L2 11l8 3 3 8 9-20z"/></svg>
+        Вступить в&nbsp;закрытый канал
+      </a>
+
+      <p class="thanks__signature">
+        Если что-то не&nbsp;пришло или возникли вопросы&nbsp;&mdash; пиши мне напрямую: <a href="https://t.me/novikovtihonn" style="color:var(--color-gold);text-decoration:underline">@novikovtihonn</a>.<br>
+        До&nbsp;связи на&nbsp;первом эфире.<br><br>
+        <strong>&mdash; Тихон</strong>
+      </p>
+
+      <div class="thanks__footer">
+        <a href="/">На главную</a>
+        &middot;
+        <a href="/oferta.html">Оферта</a>
+        &middot;
+        <a href="/privacy.html">Политика конфиденциальности</a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
