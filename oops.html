@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оплата не прошла — HypnoPractica</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <style>
+    .oops {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+    .oops__inner {
+      max-width: 640px;
+      width: 100%;
+      text-align: center;
+    }
+    .oops__icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--color-gold-light);
+      border: 1px solid var(--color-gold-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 28px;
+    }
+    .oops__icon svg {
+      width: 32px;
+      height: 32px;
+      stroke: var(--color-gold);
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .oops__title {
+      font-family: var(--font-heading);
+      font-size: clamp(32px, 5vw, 44px);
+      color: var(--color-text);
+      margin-bottom: 16px;
+      letter-spacing: var(--tracking-tight);
+      line-height: 1.15;
+    }
+    .oops__subtitle {
+      font-size: 17px;
+      color: var(--color-text-body);
+      margin-bottom: 48px;
+      line-height: 1.6;
+    }
+    .oops__card {
+      text-align: left;
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-gold-border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 28px;
+    }
+    .oops__card-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      color: var(--color-gold);
+      margin-bottom: 20px;
+      letter-spacing: 0.02em;
+      text-align: center;
+    }
+    .oops__list {
+      margin: 0;
+      padding-left: 22px;
+    }
+    .oops__list li {
+      font-size: 15px;
+      color: var(--color-text-body);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    .oops__list li:last-child {
+      margin-bottom: 0;
+    }
+    .oops__steps {
+      text-align: left;
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-gold-border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 36px;
+    }
+    .oops__steps-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      color: var(--color-gold);
+      margin-bottom: 24px;
+      letter-spacing: 0.02em;
+      text-align: center;
+    }
+    .oops__step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+    .oops__step:last-child {
+      margin-bottom: 0;
+    }
+    .oops__step-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      color: var(--color-bg);
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .oops__step-text {
+      font-size: 15px;
+      color: var(--color-text-body);
+      line-height: 1.6;
+    }
+    .oops__step-text strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+    .oops__step-text a {
+      color: var(--color-gold);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .oops__step-text a:hover {
+      color: var(--color-gold-hover);
+    }
+    .oops__cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px 36px;
+      background: var(--gradient-cta);
+      color: var(--color-bg);
+      border: none;
+      border-radius: 30px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      box-shadow: 0 4px 24px rgba(196, 162, 101, 0.18);
+    }
+    .oops__cta:hover {
+      background: var(--gradient-cta-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 32px rgba(196, 162, 101, 0.28);
+    }
+    .oops__signature {
+      margin-top: 48px;
+      font-style: italic;
+      color: var(--color-text-secondary);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .oops__signature strong {
+      color: var(--color-text);
+      font-style: normal;
+      font-weight: 500;
+    }
+    .oops__footer {
+      margin-top: 56px;
+      padding-top: 28px;
+      border-top: 1px solid var(--color-gold-border);
+      font-size: 13px;
+      color: var(--color-text-muted);
+    }
+    .oops__footer a {
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    .oops__footer a:hover {
+      color: var(--color-gold);
+    }
+
+    @media (max-width: 600px) {
+      .oops__card,
+      .oops__steps { padding: 24px 20px; }
+      .oops__cta { padding: 16px 24px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="oops">
+    <div class="oops__inner">
+
+      <div class="oops__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="13"/><circle cx="12" cy="16.5" r="0.5" fill="currentColor" stroke="currentColor"/></svg>
+      </div>
+
+      <h1 class="oops__title">Оплата не&nbsp;прошла</h1>
+
+      <p class="oops__subtitle">
+        Не&nbsp;переживай, такое бывает по&nbsp;техническим причинам.<br>
+        Деньги не&nbsp;списались, твоё место в&nbsp;программе ещё&nbsp;закреплено.
+      </p>
+
+      <div class="oops__card">
+        <p class="oops__card-title">Почему так&nbsp;могло случиться</p>
+        <ul class="oops__list">
+          <li>Не&nbsp;прошёл код подтверждения 3D-Secure (не&nbsp;пришла SMS, истёк код).</li>
+          <li>На&nbsp;карте установлен суточный лимит ниже суммы оплаты.</li>
+          <li>Банк отклонил платёж как подозрительный (звонят и&nbsp;уточняют&nbsp;&mdash; нужно подтвердить).</li>
+          <li>Опечатка в&nbsp;CVV или сроке действия карты.</li>
+        </ul>
+      </div>
+
+      <div class="oops__steps">
+        <p class="oops__steps-title">Что сделать сейчас</p>
+
+        <div class="oops__step">
+          <div class="oops__step-num">1</div>
+          <div class="oops__step-text">
+            <strong>Попробуй ещё раз.</strong> Чаще всего повторная оплата проходит&nbsp;&mdash; код приходит, банк пропускает.
+          </div>
+        </div>
+
+        <div class="oops__step">
+          <div class="oops__step-num">2</div>
+          <div class="oops__step-text">
+            <strong>Попробуй другой способ оплаты.</strong> Доступны: карта (РФ/мир), СБП, рассрочка от&nbsp;Сбера, Долями&nbsp;&mdash; до&nbsp;12 месяцев без процентов и&nbsp;переплат.
+          </div>
+        </div>
+
+        <div class="oops__step">
+          <div class="oops__step-num">3</div>
+          <div class="oops__step-text">
+            <strong>Если совсем не&nbsp;получается&nbsp;&mdash; напиши мне напрямую</strong> в&nbsp;Telegram <a href="https://t.me/novikovtihonn">@novikovtihonn</a>. Помогу разобраться, подскажу что сделать.
+          </div>
+        </div>
+      </div>
+
+      <a href="https://kabinet.hypnopractica.com" class="oops__cta">
+        Попробовать ещё раз
+      </a>
+
+      <p class="oops__signature">
+        Я&nbsp;на&nbsp;связи. Если что-то идёт не&nbsp;так&nbsp;&mdash; пиши, разберёмся.<br><br>
+        <strong>&mdash; Тихон</strong>
+      </p>
+
+      <div class="oops__footer">
+        <a href="/">На главную</a>
+        &middot;
+        <a href="/oferta.html">Оферта</a>
+        &middot;
+        <a href="/privacy.html">Политика конфиденциальности</a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
