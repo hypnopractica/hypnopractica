@@ -1281,48 +1281,41 @@
 }
 
 /* ========================================
-   SECTION BRIDGE — крючки между блоками
+   SECTION BRIDGE — крючки внутри блоков
    ======================================== */
-.section-bridge {
-  padding: 28px 0;
-  text-align: center;
-}
-
 .section-bridge__text {
+  display: block;
   max-width: 720px;
-  margin: 0 auto;
+  margin: 40px auto 0;
+  padding: 0 24px;
   font-family: var(--font-heading);
   font-size: clamp(18px, 2.2vw, 22px);
   line-height: 1.45;
   color: var(--color-gold);
   font-style: italic;
   letter-spacing: 0.01em;
+  text-align: center;
   position: relative;
-  padding: 0 24px;
 }
 
-.section-bridge__text::before,
-.section-bridge__text::after {
+.section-bridge__text::before {
   content: '';
   display: block;
   width: 56px;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--color-gold-border), transparent);
-  margin: 14px auto;
+  margin: 0 auto 18px;
 }
 
 @media (max-width: 600px) {
-  .section-bridge {
-    padding: 20px 0;
-  }
   .section-bridge__text {
     font-size: 17px;
     padding: 0 16px;
+    margin-top: 32px;
   }
-  .section-bridge__text::before,
-  .section-bridge__text::after {
+  .section-bridge__text::before {
     width: 40px;
-    margin: 10px auto;
+    margin: 0 auto 14px;
   }
 }
 
