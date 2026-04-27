@@ -1281,6 +1281,97 @@
 }
 
 /* ========================================
+   INSTALLMENT TABLE — раскладка рассрочки
+   ======================================== */
+.installment-table {
+  margin: 24px 0 8px;
+  overflow-x: auto;
+  border: 1px solid var(--color-gold-border);
+  border-radius: 12px;
+  background: rgba(196, 162, 101, 0.04);
+}
+
+.installment-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.installment-table thead tr {
+  border-bottom: 2px solid var(--color-gold-border);
+}
+
+.installment-table th {
+  text-align: left;
+  padding: 14px 16px;
+  color: var(--color-gold);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.installment-table th:nth-child(2),
+.installment-table th:nth-child(3) {
+  text-align: right;
+}
+
+.installment-table th span {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.installment-table tbody tr {
+  border-bottom: 1px dashed rgba(196, 162, 101, 0.15);
+  transition: background 0.25s var(--ease-out);
+}
+
+.installment-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.installment-table tbody tr:hover {
+  background: rgba(196, 162, 101, 0.06);
+}
+
+.installment-table td {
+  padding: 14px 16px;
+  color: var(--color-text-body);
+  white-space: nowrap;
+}
+
+.installment-table td:nth-child(2),
+.installment-table td:nth-child(3) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.installment-table td strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .installment-table table {
+    font-size: 13.5px;
+  }
+  .installment-table th,
+  .installment-table td {
+    padding: 12px 10px;
+  }
+  .installment-table th {
+    font-size: 11px;
+  }
+}
+
+/* ========================================
    SECTION BRIDGE — крючки внутри блоков
    ======================================== */
 .section-bridge__text {
