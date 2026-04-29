@@ -19,6 +19,22 @@ document.querySelectorAll('.accordion__trigger').forEach(trigger => {
   });
 });
 
+/* ===== AUTO-OPEN FAQ ON HASH LINK ===== */
+function openFaqByHash() {
+  const hash = window.location.hash;
+  if (!hash) return;
+  const target = document.querySelector(hash);
+  if (!target || !target.classList.contains('accordion__item')) return;
+  if (target.classList.contains('is-open')) return;
+  const trigger = target.querySelector('.accordion__trigger');
+  if (trigger) {
+    trigger.click();
+    setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+  }
+}
+window.addEventListener('hashchange', openFaqByHash);
+window.addEventListener('load', openFaqByHash);
+
 /* ===== PROGRAM MODULES ACCORDION ===== */
 document.querySelectorAll('.program__module-trigger').forEach(trigger => {
   trigger.addEventListener('click', () => {
