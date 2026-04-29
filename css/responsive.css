@@ -60,9 +60,9 @@
   .bridge__cards { grid-template-columns: 1fr; gap: 16px; }
   .bridge__final { font-size: 18px; }
 
-  .stats__grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .stats__card { padding: 24px 14px; }
-  .stats__number { font-size: 36px; }
+  .stats__grid { grid-template-columns: 1fr; gap: 16px; max-width: 100%; }
+  .stats__card { padding: 28px 20px; }
+  .stats__number { font-size: 40px; }
   .stats__card--main .stats__number { font-size: 48px; }
 
   .author__grid { grid-template-columns: 1fr; gap: 36px; }
