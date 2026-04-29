@@ -1147,10 +1147,14 @@
 
 .pricing__payment-note {
   text-align: center;
-  color: var(--color-text-muted);
-  font-size: var(--size-small);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-loose);
   margin-bottom: 36px;
+  max-width: var(--max-width-text);
+  margin-left: auto;
+  margin-right: auto;
 }
+.pricing__payment-note strong { color: var(--color-text); }
 
 .pricing__roi { max-width: 720px; margin: 0 auto; }
 .pricing__roi p { color: var(--color-text); line-height: var(--leading-loose); }
