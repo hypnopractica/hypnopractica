@@ -1,6 +1,6 @@
 # HypnoPractica
 
-Лендинг школы гипнотерапии и практической психосоматики HypnoPractica.
+Лендинг школы гипнотерапии HypnoPractica.
 
 - Основатель: Тихон Новиков, Certified Master Hypnotherapist (AAH)
 - Живой сайт: https://hypnopractica.com
